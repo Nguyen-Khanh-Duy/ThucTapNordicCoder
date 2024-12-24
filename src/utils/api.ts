@@ -1,3 +1,5 @@
+
+import { headers } from 'next/dist/client/components/headers';
 import queryString from 'query-string';
 
 export const sendRequest = async <T>(props: IRequest) => { //type
@@ -7,7 +9,7 @@ export const sendRequest = async <T>(props: IRequest) => { //type
         body,
         queryParams = {},
         useCredentials = false,
-        headers = {},
+     
         nextOption = {}
     } = props;
 

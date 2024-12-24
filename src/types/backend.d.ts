@@ -1,5 +1,6 @@
 export { };
 // https://bobbyhadz.com/blog/typescript-make-types-global#declare-global-types-in-typescript
+// https://bobbyhadz.com/blog/typescript-make-types-global#declare-global-types-in-typescript
 
 declare global {
     interface IRequest {
@@ -25,8 +26,18 @@ declare global {
             pageSize: number;
             pages: number;
             total: number;
-        },
-        result: T[]
+        };
+        result: T[];
     }
 
+    interface ILogin {
+        user: {
+            _id: string;
+            name: string;
+            email: string;
+        };
+        access_token: string;
+    }
 }
+
+// No need to export anything here for global types

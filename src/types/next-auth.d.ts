@@ -1,13 +1,14 @@
-import NextAuth, { DefaultSession } from "next-auth";
-import { JWT } from "next-auth/jwt"
+import "next-auth";
+import "next-auth/jwt";
 
 interface IUser {
     _id: string;
     username: string;
     email: string;
-    isVerify: boolean,
+    isVerify: boolean;
     type: string;
     role: string;
+    access_token: string;
 }
 declare module "next-auth/jwt" {
     /** Returned by the `jwt` callback and `getToken`, when using JWT sessions */
